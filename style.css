@@ -1,0 +1,1072 @@
+/* ===========================
+   GLOBAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Times New Roman',Tahoma,Geneva,Verdana,sans-serif;
+    background:#fff5f0;
+    color:#333;
+    line-height:1.6;
+    padding-top:70px;
+}
+
+/* ===========================
+   SPA
+=========================== */
+
+.page{
+    display:none;
+    animation:fade .4s ease;
+}
+
+.page.active{
+    display:block;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* HEADER */
+
+.top-header{
+
+    border-bottom:1px solid #eee;
+
+    padding:20px 0;
+
+}
+
+.header-wrapper{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:30px;
+
+}
+
+.logo img{
+
+    height:45px;
+
+}
+
+.search-box{
+
+    flex:1;
+
+    display:flex;
+
+    max-width:600px;
+
+    position:relative;
+
+}
+
+.search-box input{
+    width:100%;
+    height:48px;
+    border:1px solid #ddd;
+    border-radius:30px;
+    padding:0 55px 0 20px;
+    transition:.3s;
+}
+
+.search-box input:focus{
+    border-color:#8cc6f8;
+    box-shadow:0 0 8px rgba(91,132,167,.3);
+}
+
+.search-box button{
+
+    position:absolute;
+
+    right:5px;
+
+    top:5px;
+
+    width:38px;
+
+    height:38px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#4099c2;
+
+    color:#fff;
+
+}
+
+.header-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    
+}
+
+.header-right a {
+    position: relative;
+    color: #6a8e99;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.header-icon{
+
+    display:flex;
+    font-size: 20px;
+    gap:22px;
+    cursor: pointer;
+
+}
+
+.header-icon a{
+
+    color:#000;
+
+    font-size:24px;
+
+}
+
+.menu-navbar{
+
+    background:#fff;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.menu-navbar ul{
+
+    display:flex;
+
+    gap:35px;
+
+    list-style:none;
+
+    margin:0;
+
+    padding:15px 0;
+
+}
+
+.menu-navbar a{
+
+    text-decoration:none;
+
+    color:#111;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.menu-navbar a:hover{
+
+    color:#e91e63;
+
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+    background:#5b84a7 !important;
+}
+
+.navbar-brand{
+    font-weight:bold;
+    font-size:24px;
+}
+
+.navbar-brand i{
+    color:#e9cfa0;
+}
+
+.nav-link{
+    color:white !important;
+    font-family:"Times New Roman",serif;
+    margin-left:10px;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:#e9cfa0 !important;
+}
+
+.nav-link.active{
+    color:#e9cfa0 !important;
+    font-weight:bold;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.jumbotron{
+    background:linear-gradient(rgba(0,0,0,.5),
+    rgba(0,0,0,.5)),
+    url("dll.jpg");
+    background-size:cover;
+    background-position:center;
+    color:white;
+    min-height:550px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:50px;
+}
+
+.jumbotron h1{
+    font-size:55px;
+    font-weight:bold;
+}
+
+.jumbotron p{
+    font-size:22px;
+    margin-top:15px;
+    margin-bottom:25px;
+}
+
+.jumbotron .btn{
+    padding:12px 5px;
+    font-size:18px;
+    border-radius:30px;
+}
+
+/* ===========================
+   CAROUSEL
+=========================== */
+
+.carousel{
+    max-width:850px;
+    margin:auto;
+}
+
+.carousel-item{
+    height:800px;
+}
+
+.carousel-item img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+
+/* ===========================
+   SECTION TITLE
+=========================== */
+
+h2{
+    font-weight:bold;
+    margin-bottom:30px;
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.card{
+    border:none;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.card{
+    transition:all .3s ease;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+}
+
+.card-body{
+    text-align:center;
+}
+
+.card-title{
+    font-weight:bold;
+}
+
+.card p{
+    color:#555;
+}
+
+.card .btn{
+    border-radius:25px;
+}
+
+.card-a{
+    margin-bottom:-50px;
+}
+.card-b{
+    margin-bottom:-50px;
+}
+.card-c{
+    
+    margin-bottom:25px;
+}
+
+/* ===========================
+   ICON
+=========================== */
+
+.fa-3x{
+    margin-bottom:15px;
+}
+
+/* ===========================
+   TAB MENU
+=========================== */
+
+.nav-tabs .nav-link{
+    color:#4a6b69 !important;
+}
+
+.nav-tabs .nav-link.active{
+    background:#5f82a7;
+    color:white !important;
+    border:none;
+}
+
+.shop-wrapper{
+    display:flex;
+    gap:30px;
+    align-items:flex-start;
+}
+
+.sidebar-filter{
+    width:280px;
+    position:sticky;
+    top:100px;
+}
+
+.product-area{
+    flex:1;
+}
+.filter-card{
+    background:#fff;
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+.filter-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-weight:700;
+    margin-bottom:15px;
+}
+.filter-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+.filter-tags button{
+    border:1px solid #ddd;
+    background:#fff;
+    padding:8px 14px;
+    border-radius:6px;
+    transition:.3s;
+    font-size:14px;
+}
+.filter-tags button:hover{
+    background:#000;
+    color:#fff;
+}
+.filter-card label{
+    display:block;
+    margin:10px 0;
+}
+.filter-card a{
+    display:inline-block;
+    margin-top:12px;
+    text-decoration:none;
+    color:#007bff;
+}
+@media(max-width:992px){
+.shop-wrapper{
+    flex-direction:column;
+}
+.sidebar-filter{
+    width:100%;
+    position:static;
+}}
+
+/* ===========================
+   ACCORDION
+=========================== */
+
+.card-header{
+    background:#5f82a7;
+    color:white;
+}
+
+.card-header a{
+    color:white;
+    text-decoration:none;
+    display:block;
+}
+
+.card-header a:hover{
+    text-decoration:none;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.btn{
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* ===========================
+   ALERT
+=========================== */
+
+.alert{
+    border-radius:10px;
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+#formKontak{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.form-control{
+    border-radius:10px;
+}
+
+textarea{
+    resize:none;
+}
+
+/* ===========================
+   DETAIL PRODUK
+=========================== */
+
+.detail-modal{
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.produk-modal-img{
+    width:170px;
+    height:170px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.detail-modal h4{
+    font-weight:bold;
+}
+
+.detail-modal h5{
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.detail-modal p{
+    font-size:15px;
+    color:#7bb1bb;
+    line-height:1.6;
+}
+
+.detail-modal .btn{
+    border-radius:30px;
+    width:120px;
+}
+
+.modal-header{
+    background-color: #88b5ca;
+}
+
+/* ================= HEADER PRODUK ================= */
+
+.header-product{
+    border-bottom:1px solid #ddd;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+.top-header{
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 30px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:45px;
+}
+
+.logo h3{
+    margin:0;
+    font-size:28px;
+    font-weight:700;
+}
+
+.menu-produk{
+    display:flex;
+    list-style:none;
+    gap:35px;
+    margin:0;
+    padding:0;
+}
+
+.menu-produk li a{
+    text-decoration:none;
+    color:#222;
+    font-weight:600;
+    transition:.3s;
+}
+
+.menu-produk li a:hover{
+    color:#ff4fa0;
+}
+
+.icon-header{
+    display:flex;
+    gap:22px;
+    font-size:20px;
+    cursor:pointer;
+}
+
+.icon-header i:hover{
+    color:#ff4fa0;
+}
+
+@media(max-width:992px){
+
+    .top-header{
+        flex-wrap:wrap;
+        gap:20px;
+    }
+
+    .menu-produk{
+        width:100%;
+        justify-content:center;
+    }
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    margin-top:60px;
+    font-size:16px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:992px){
+    .jumbotron{
+        min-height:450px;
+    }
+    .jumbotron h1{
+        font-size:42px;
+    }
+    .jumbotron p{
+        font-size:18px;
+    }
+    .carousel img{
+        height:350px;
+    }
+}
+
+@media(max-width:768px){
+    body{
+        padding-top:60px;
+    }
+    .jumbotron{
+        min-height:380px;
+        text-align:center;
+    }
+    .jumbotron h1{
+        font-size:34px;
+    }
+    .jumbotron p{
+        font-size:17px;
+    }
+    .carousel img{
+        height:250px;
+    }
+    .card img{
+        height:220px;
+    }
+    .navbar-brand{
+        font-size:20px;
+    }
+}
+
+@media(max-width:576px){
+    .jumbotron{
+        min-height:320px;
+    }
+    .jumbotron h1{
+        font-size:28px;
+    }
+    .jumbotron p{
+        font-size:15px;
+    }
+    .carousel img{
+        height:200px;
+    }
+    .btn{
+        width:100%;
+    }
+    form{
+        padding:20px;
+    }
+}
+
+.produk-card{
+    height:100%;
+    border:none;
+    border-radius:11px;
+    overflow:hidden;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.produk-card .card-body{
+    min-height:220px;
+}
+
+.produk-card-a{
+    height:100%;
+}
+
+.produk-card-a .card-body{
+    display:flex;
+    flex-direction:column;
+}
+
+.produk-card-a .btn{
+    margin-top:auto;
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo-navbar{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+}
+.logo-hero{
+    width:180px;
+    height:auto;
+    margin-bottom:20px;
+}
+
+@media(max-width:768px){
+    .logo-navbar{
+        width:45px;
+        height:45px;
+    }
+    .logo-hero{
+        width:130px;
+    }
+}
+
+/*==========================
+        TENTANG
+===========================*/
+
+.judul-tentang{
+    font-size:42px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.subjudul{
+    color:#365066;
+    margin-bottom:50px;
+}
+
+.tentang-card{
+    background:#fff;
+    padding:35px;
+    margin-bottom:35px;
+    border-radius:18px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.tentang-card h2{
+    color:#d8a3b5;
+    margin-bottom:25px;
+    font-weight:bold;
+}
+
+.tentang-card p{
+    text-align:justify;
+    font-size:17px;
+    line-height:1.9;
+    color:#555;
+}
+
+/* ===========================
+   MODAL FASILITAS
+=========================== */
+
+.fasilitas-img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.fasilitas-img:hover{
+    transform:scale(1.05);
+}
+
+.modal-body h5{
+    font-weight:bold;
+}
+
+/* ===========================
+   GOOGLE MAPS
+=========================== */
+
+.embed-responsive{
+    border-radius:15px;
+    overflow:hidden;
+    margin-top:20px;
+}
+
+.embed-responsive iframe{
+    border:0;
+}
+
+/* ===========================
+   SOSIAL MEDIA
+=========================== */
+
+
+/*=========================
+    LOKASI
+==========================*/
+
+#lokasi iframe{
+    width:100%;
+    height:450px;
+    border:none;
+    border-radius:15px;
+}
+
+#lokasi .card{
+    border:none;
+    border-radius:15px;
+}
+
+/* ===========================
+   BUTTON DETAIL
+=========================== */
+
+.btn-detail{
+    width:150px;
+    border-radius:25px;
+    font-weight:600;
+    transition:.3s;
+    background-color: #ecd3b6;
+}
+
+.btn-detail:hover{
+    background:#5b84a7;
+    color:#dac7aa;
+    text-align: center;
+}
+
+/*==========================
+        CONTACT BANNER
+===========================*/
+
+.contact-banner{
+    background:linear-gradient(
+    90deg,
+    #a58a64,
+    #ffecd4,
+    #a58a64);
+    padding:80px 0;
+    position:relative;
+    overflow:hidden;
+}
+
+/* Motif atas */
+
+.contact-banner::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:28px;
+    background:url("motif.webp") repeat-x;
+    background-size:auto 28px;
+}
+
+/* Motif bawah */
+
+.contact-banner::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:28px;
+    background:url("motif.webp") repeat-x;
+    background-size:auto 28px;
+}
+
+.contact-logo{
+    width:130px;
+    margin-bottom:15px;
+}
+
+.contact-banner h1{
+    font-size:60px;
+    font-family:"Times New Roman",serif;
+    letter-spacing:3px;
+    margin-bottom:15px;
+    color:#111;
+}
+
+.contact-banner p{
+    color:#6d5516;
+    font-size:22px;
+}
+
+/*=========================
+        FOOTER
+==========================*/
+
+.footer{
+    background:#365066;
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.footer-logo{
+    max-width:120px;
+    width:100%;
+    margin-bottom:20px;
+}
+
+.footer-desc{
+    max-width:900px;
+    margin:auto;
+    line-height:1.9;
+    color:#d1d5db;
+    font-size:16px;
+}
+
+.footer-title{
+    margin-top:45px;
+    letter-spacing:2px;
+    font-weight:bold;
+}
+
+.footer-subtitle{
+    color:#ccc;
+    margin-bottom:25px;
+}
+
+.newsletter{
+    display:flex;
+    justify-content:center;
+    max-width:550px;
+    margin:25px auto;background:transparent;
+    box-shadow:none;
+    padding:0
+}
+
+.newsletter input{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px 0 0 10px;
+    outline:none;
+}
+
+.newsletter button{
+    border:none;
+    background:#ce7dbc;
+    color:white;
+    width:70px;
+    border-radius:0 10px 10px 0;
+    cursor:pointer;
+}
+
+.newsletter button:hover{
+    background:#ce7dbc;
+}
+
+.footer-social{
+    margin-top:35px;
+}
+
+.footer-social a{
+    width:55px;
+    height:55px;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:#222;
+    color:white;
+    margin:8px;
+    font-size:22px;
+    transition:.3s;
+}
+
+.footer-social a:hover{
+    background:#ce7dbc;
+    transform:translateY(-6px);
+}
+
+.footer hr{
+    margin:45px auto;
+    border-color:#444;
+}
+
+.copyright{
+    color:#bbb;
+    line-height:1.8;
+}
+
+@media(max-width:768px){
+
+    .shop-wrapper{
+        flex-direction:column;
+    }
+
+    .sidebar-filter{
+        width:100%;
+    }
+
+    .card img{
+        height:250px;
+    }
+
+    .carousel-item img{
+        height:250px;
+    }
+
+    .contact-banner h1{
+        font-size:34px;
+    }
+
+    .contact-banner p{
+        font-size:16px;
+    }
+
+}
+.product-card{
+    position:relative;
+}
+
+.favorite-btn{
+
+    position:absolute;
+
+    top:12px;
+
+    right:12px;
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    background:white;
+
+    border-radius:50%;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.favorite-btn:hover{
+
+    transform:scale(1.1);
+
+}
+
+.favorite-btn i{
+
+    font-size:20px;
+
+    color:#555;
+
+}
+
+.favorite-btn.active i{
+
+    color:#ce7dbc;
+
+}

@@ -224,21 +224,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-const searchInput = document.querySelector(".search-box input");
-
-searchInput.addEventListener("keyup", function(){
-
-    const keyword = this.value.toLowerCase();
-
-    const produk = document.querySelectorAll(".product-card");
-
-    produk.forEach(card=>{
-
-        const nama = card.innerText.toLowerCase();
-
-        card.style.display =
-        nama.includes(keyword) ? "block" : "none";
-
-    });
-
-});

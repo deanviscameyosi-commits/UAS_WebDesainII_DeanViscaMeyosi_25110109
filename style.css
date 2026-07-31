@@ -70,54 +70,6 @@ body{
 
 }
 
-.search-box{
-
-    flex:1;
-
-    display:flex;
-
-    max-width:600px;
-
-    position:relative;
-
-}
-
-.search-box input{
-    width:100%;
-    height:48px;
-    border:1px solid #ddd;
-    border-radius:30px;
-    padding:0 55px 0 20px;
-    transition:.3s;
-}
-
-.search-box input:focus{
-    border-color:#8cc6f8;
-    box-shadow:0 0 8px rgba(91,132,167,.3);
-}
-
-.search-box button{
-
-    position:absolute;
-
-    right:5px;
-
-    top:5px;
-
-    width:38px;
-
-    height:38px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:#4099c2;
-
-    color:#fff;
-
-}
-
 .header-right {
     display: flex;
     gap: 20px;
@@ -233,7 +185,7 @@ body{
     background-size:cover;
     background-position:center;
     color:white;
-    min-height:550px;
+    min-height:450px;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -267,12 +219,12 @@ body{
 }
 
 .carousel-item{
-    height:800px;
+    height:550px;
 }
 
 .carousel-item img{
-    width:100%;
-    height:100%;
+    width:auto;
+    height:auto;
     object-fit:contain;
 }
 
@@ -289,14 +241,6 @@ h2{
 /* ===========================
    CARD
 =========================== */
-
-.card{
-    border:none;
-    border-radius:15px;
-    overflow:hidden;
-    transition:.4s;
-}
-
 .card{
     transition:all .3s ease;
 }
@@ -306,9 +250,7 @@ h2{
 }
 
 .card img{
-    width:100%;
-    height:500px;
-    object-fit:cover;
+    width:auto;
 }
 
 .card-body{
@@ -325,17 +267,6 @@ h2{
 
 .card .btn{
     border-radius:25px;
-}
-
-.card-a{
-    margin-bottom:-50px;
-}
-.card-b{
-    margin-bottom:-50px;
-}
-.card-c{
-    
-    margin-bottom:25px;
 }
 
 /* ===========================
@@ -410,18 +341,12 @@ h2{
     display:block;
     margin:10px 0;
 }
-.filter-card a{
-    display:inline-block;
-    margin-top:12px;
-    text-decoration:none;
-    color:#007bff;
-}
 @media(max-width:992px){
 .shop-wrapper{
     flex-direction:column;
 }
 .sidebar-filter{
-    width:100%;
+    width:auto;
     position:static;
 }}
 
@@ -596,7 +521,7 @@ textarea{
     }
 
     .menu-produk{
-        width:100%;
+        width:auto;
         justify-content:center;
     }
 
@@ -635,20 +560,18 @@ footer{
         padding-top:60px;
     }
     .jumbotron{
-        min-height:380px;
+        min-height: 250px;
+        padding: 50px 20px;
         text-align:center;
     }
     .jumbotron h1{
-        font-size:34px;
+        font-size:28px;
     }
     .jumbotron p{
-        font-size:17px;
+        font-size:15px;
     }
     .carousel img{
         height:250px;
-    }
-    .card img{
-        height:220px;
     }
     .navbar-brand{
         font-size:20px;
@@ -669,7 +592,7 @@ footer{
         height:200px;
     }
     .btn{
-        width:100%;
+        width:auto;
     }
     form{
         padding:20px;
@@ -677,28 +600,11 @@ footer{
 }
 
 .produk-card{
-    height:100%;
+    height:auto;
     border:none;
     border-radius:11px;
     overflow:hidden;
     box-shadow:0 3px 10px rgba(0,0,0,.1);
-}
-
-.produk-card .card-body{
-    min-height:220px;
-}
-
-.produk-card-a{
-    height:100%;
-}
-
-.produk-card-a .card-body{
-    display:flex;
-    flex-direction:column;
-}
-
-.produk-card-a .btn{
-    margin-top:auto;
 }
 
 /* ===========================
@@ -723,6 +629,12 @@ footer{
     }
     .logo-hero{
         width:130px;
+    }
+    .logo img{
+        width: 45px;
+    }
+    .logo h3{
+        font-size: 20px;
     }
 }
 
@@ -768,7 +680,7 @@ footer{
 =========================== */
 
 .fasilitas-img{
-    width:100%;
+    width:auto;
     height:220px;
     object-fit:cover;
     border-radius:10px;
@@ -807,7 +719,7 @@ footer{
 ==========================*/
 
 #lokasi iframe{
-    width:100%;
+    width:auto;
     height:450px;
     border:none;
     border-radius:15px;
@@ -853,28 +765,26 @@ footer{
 
 /* Motif atas */
 
-.contact-banner::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:28px;
-    background:url("motif.webp") repeat-x;
-    background-size:auto 28px;
+.contact-banner::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 28px;
+    background: url(motif.webp) 0% 0% / auto 28px repeat-x;
 }
 
 /* Motif bawah */
 
-.contact-banner::after{
-    content:"";
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:100%;
-    height:28px;
-    background:url("motif.webp") repeat-x;
-    background-size:auto 28px;
+.contact-banner::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 28px;
+    background: url(motif.webp) 0% 0% / auto 28px repeat-x;
 }
 
 .contact-logo{
@@ -908,7 +818,7 @@ footer{
 
 .footer-logo{
     max-width:120px;
-    width:100%;
+    width:auto;
     margin-bottom:20px;
 }
 
@@ -941,7 +851,7 @@ footer{
 }
 
 .newsletter input{
-    width:100%;
+    width:auto;
     padding:14px;
     border:none;
     border-radius:10px 0 0 10px;
@@ -1001,17 +911,28 @@ footer{
     }
 
     .sidebar-filter{
-        width:100%;
+        width:auto;
     }
 
-    .card img{
-        height:250px;
+    .carousel{
+        max-width:850px;
+        margin:auto;
+    }
+
+    .carousel-item{
+        height:550px;
     }
 
     .carousel-item img{
-        height:250px;
+        width:auto;
+        height:auto;
+        object-fit:contain;
     }
-
+    
+    .card img{
+        width: auto;
+    }
+    
     .contact-banner h1{
         font-size:34px;
     }
